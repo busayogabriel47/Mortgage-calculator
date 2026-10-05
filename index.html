@@ -13,10 +13,13 @@
       <div class="mortgage__main">
 
         <!-- Mortgage Form -->
-        <form class="mortgage__form">
+        <form class="mortgage__form" id="mortgageForm">
+
           <div class="mortgage__form__header">
             <h5>Mortgage Calculator</h5>
-            <button type="reset" class="clear-btn">Clear All</button>
+            <button type="reset" id="clearBtn" class="clear-btn">
+              Clear All
+            </button>
           </div>
 
           <!-- Mortgage Amount -->
@@ -31,6 +34,7 @@
               <label for="term">Term (Years)</label>
               <input type="text" id="term" name="term" />
             </div>
+
             <div class="form-group">
               <label for="rate">Interest Rate (%)</label>
               <input type="text" id="rate" name="rate" />
@@ -40,12 +44,23 @@
           <!-- Mortgage Type -->
           <fieldset class="mortgage__type">
             <legend>Mortgage Type</legend>
+
             <label class="mortgage__type_option">
-              <input type="radio" name="type" value="repayment" />
+              <input
+                type="radio"
+                name="type"
+                value="repayment"
+                checked
+              />
               Repayment
             </label>
+
             <label class="mortgage__type_option">
-              <input type="radio" name="type" value="interest" />
+              <input
+                type="radio"
+                name="type"
+                value="interest"
+              />
               Interest Only
             </label>
           </fieldset>
@@ -53,21 +68,33 @@
           <!-- Calculate Button -->
           <div class="mortgage__btn">
             <button type="submit">
-              <img src="./assets/cal.png" alt="calculator" width="20" />
+              <img
+                src="./assets/cal.png"
+                alt="calculator"
+                width="20"
+              />
               Calculate Repayment
             </button>
           </div>
+
         </form>
 
         <!-- Result Section -->
-        <div class="mortgage__result">
-          <img src="./assets/empty.png" alt="No result" width="40%" />
+        <div class="mortgage__result" id="result">
+          <img
+            src="./assets/empty.png"
+            alt="No result"
+            width="40%"
+          />
+
           <h2>Results shown here</h2>
         </div>
 
       </div>
     </div>
   </div>
+
+  <script src="./index.js"></script>
 
 </body>
 </html>
